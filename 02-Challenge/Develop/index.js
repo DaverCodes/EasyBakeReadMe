@@ -1,10 +1,12 @@
-// TODO: Include packages needed for this application
+
+//this segment of code is needed to access npm packages that allow you to ask user questions and generate a file with them
+
 const inquirer = require('inquirer');
 const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkdown')
 
+//below I have written a constructor for all 11 questions
 
-// TODO: Create an array of questions for user input
 function Question(name, message, type, choices) {
     this.name = name;
     this.message = message;
@@ -12,9 +14,13 @@ function Question(name, message, type, choices) {
     this.choices = choices || [];
 }
 
+//this allows the answered questions to be read and brings the user to the next question
+
 Question.prototype.ask = function () {
     return inquirer.prompt(this);
 };
+
+//below is the array of questions that is simplified by utilizing the constructor above, a whole line of code was required for the license question, this annoyed me more than it should have
 
 const questions = [
     new Question('title', 'write the project title', 'input'),
@@ -30,12 +36,21 @@ const questions = [
     new Question('tests', 'how do you run a test', 'input'),
 ];
 
+
+//here is another method use that simplifies the consolidation of all the answeres given 
+
 Question.askAll = function () {
     return Promise.all(questions.map(question => question.ask()))
     .then(answers => Object.assign({}, ...answers));
 };
 
+
+//this code exports the Question constructor so it can be used in other modules that require it.
+
 module.exports = Question;
+
+//now the readme file can finally be created, we take the module we just created and ask for it, get the array of answers, 
+//and use markdown to create the README file
 
 const Question = require('./Question');
 
