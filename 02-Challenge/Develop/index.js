@@ -1,41 +1,32 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs')
+const generateMarkdown = require('./utils/generateMarkdown')
 
 
 // TODO: Create an array of questions for user input
-function ReadMeBuilder{
-    questions(type, name, message){
-    this.type = type;
+function Question(name, message, type, choices) {
     this.name = name;
     this.message = message;
-    }
-    printMetaData() {
-        //something about printing to readme.md
+    this.type = type;
+    this.choices = choices || [];
+  }
 
-    }
-    
-}
-
-const questions = [
-    inquirer
-  .prompt([
-    new questions()
-    new questions()
-    new questions()
-    new questions()
-    new questions()
-    new questions()
-    new questions()
-    new questions()
-    new questions()
-    new questions()
-    new questions()
+  const questions = [
+    new Question('title', 'write the project title', 'input'),
+    new Question('author', "what is your name", 'input'),
+    new Question('username', 'What your GitHub username?', 'input'),
+    new Question('email', 'What is your email?', 'input'),
+    new Question('year', 'enter the current year', 'input'),
+    new Question('description', 'give a breif description of the project', 'input'),
+    new Question('installation', 'what needs to be installed and how is it installed', 'input'),
+    new Question('usage', 'what should the user see and how should they interact with it', 'input'),
+    new Question('license', 'what license was used, if none write N/A', 'list', ['MIT', 'Apache 2.0', 'BSD 3', 'GNU GPL v3.0', 'N/A']),
+    new Question('contribute', 'how can the user expect to help progress the project', 'input'),
+    new Question('tests', 'how do you run a test', 'input'),
+  ];
 
 
-
-
-  ])
   .then((answers) => {
     // Use user feedback for... whatever!!
   })
