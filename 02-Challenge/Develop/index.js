@@ -12,6 +12,10 @@ function Question(name, message, type, choices) {
     this.choices = choices || [];
   }
 
+  Question.prototype.ask = function () {
+    return inquirer.prompt(this);
+  };
+
   const questions = [
     new Question('title', 'write the project title', 'input'),
     new Question('author', "what is your name", 'input'),
@@ -25,6 +29,11 @@ function Question(name, message, type, choices) {
     new Question('contribute', 'how can the user expect to help progress the project', 'input'),
     new Question('tests', 'how do you run a test', 'input'),
   ];
+
+  Question.askAll = function () {
+    return Promise.all(questions.map(question => question.ask()))
+      .then(answers => Object.assign({}, ...answers));
+  };
 
 
   .then((answers) => {
