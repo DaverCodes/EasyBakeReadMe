@@ -4,53 +4,35 @@ const fs = require('fs')
 
 
 // TODO: Create an array of questions for user input
+function ReadMeBuilder{
+    questions(type, name, message){
+    this.type = type;
+    this.name = name;
+    this.message = message;
+    }
+    printMetaData() {
+        //something about printing to readme.md
+
+    }
+    
+}
+
 const questions = [
     inquirer
   .prompt([
-    /* Pass your questions in here */
-    {type: "input",
-    name: "title",
-    message: "What is your project title"},
+    new questions()
+    new questions()
+    new questions()
+    new questions()
+    new questions()
+    new questions()
+    new questions()
+    new questions()
+    new questions()
+    new questions()
+    new questions()
 
-    {type: "input",
-    name: "title",
-    message: "What is your project title"},
-    
-    {type: "input",
-    name: "title",
-    message: "What is your project title"},
 
-    {type: "input",
-    name: "title",
-    message: "What is your project title"},
-
-    {type: "input",
-    name: "title",
-    message: "What is your project title"},
-
-    {type: "input",
-    name: "title",
-    message: "What is your project title"},
-
-    {type: "input",
-    name: "title",
-    message: "What is your project title"},
-
-    {type: "input",
-    name: "title",
-    message: "What is your project title"},
-
-    {type: "input",
-    name: "title",
-    message: "What is your project title"},
-
-    {type: "input",
-    name: "title",
-    message: "What is your project title"},
-
-    {type: "input",
-    name: "title",
-    message: "What is your project title"},
 
 
   ])
