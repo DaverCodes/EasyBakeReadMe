@@ -34,23 +34,59 @@ This project is licensed under the ${license} license.`;
   }
 }
 
-// Define an array of questions using the Question constructor
-const questions = [
-  new Question('title', 'What is the title of your project?', 'input'),
-  new Question('description', 'Please provide a description of your project.', 'input'),
-  new Question('installation', 'What are the installation instructions for your project?', 'input'),
-  new Question('usage', 'How is your project intended to be used?', 'input'),
-  new Question('contributing', 'How can users contribute to your project?', 'input'),
-  new Question('tests', 'What are the testing instructions for your project?', 'input'),
-  new Question('license', 'Which license does your project use?', 'list', ['MIT', 'GPLv3', 'Apache', 'BSD', 'N/A']),
-  new Question('github', 'What is your GitHub username?', 'input'),
-  new Question('email', 'What is your email address?', 'input'),
-];
+const inquirer = require('inquirer');
 
-// Create a function to prompt the user with the questions array
 function promptUser() {
-  return inquirer.prompt(questions);
+  return inquirer.prompt([
+    {
+      type: 'input',
+      name: 'title',
+      message: 'What is the title of your project?'
+    },
+    {
+      type: 'input',
+      name: 'description',
+      message: 'Please provide a description of your project.'
+    },
+    {
+      type: 'input',
+      name: 'installation',
+      message: 'What are the installation instructions for your project?'
+    },
+    {
+      type: 'input',
+      name: 'usage',
+      message: 'How is your project intended to be used?'
+    },
+    {
+      type: 'input',
+      name: 'contributing',
+      message: 'How can users contribute to your project?'
+    },
+    {
+      type: 'input',
+      name: 'tests',
+      message: 'What are the testing instructions for your project?'
+    },
+    {
+      type: 'list',
+      name: 'license',
+      message: 'Which license does your project use?',
+      choices: ['MIT', 'GPLv3', 'Apache', 'BSD', 'N/A']
+    },
+    {
+      type: 'input',
+      name: 'github',
+      message: 'What is your GitHub username?'
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email address?'
+    }
+  ]);
 }
+
 
 // Create a function to write the README file
 function writeToFile(fileName, data) {
