@@ -1,10 +1,10 @@
-# readmegenerator
+# generate a readme
   
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Description
 
-  whith this project you are taken on a delightful journey to write a whole readme file with ease through the terminal to lessen the effects of carpal tunnel
+   with this project you are taken on a delightful journey to write a whole readme file with ease through the terminal that will lessen the effects of carpal tunnel!
 
   ## Table of Contents
 
@@ -20,8 +20,13 @@
   npm i -d
 
   ## Usage
+  
+  <a href="Assets\coding quiz.gif"><img src="Untitled_ May 8, 2023 4_18 PM.gif"></a>
 
-  once you clone the repo and have installed the dependencies, open the integrated terminal and run npm start to be taken on a journey begin your journey through 9 prompts, once answered correctly you will be gifted with a fully written README
+[watch video](https://drive.google.com/file/d/1qYDQKrWnm_lVEcKZhCXqd8tmpUjVIyUn/view?usp=sharing)
+
+
+    once you clone the repo and have installed the dependencies, open the integrated terminal and run npm start to be taken on a journey begin your journey through 9 prompts, once answered correctly you will be gifted with a fully written README!
 
   ## License
     
@@ -29,7 +34,7 @@
 
   ## Contributing
 
-  there are still things that need to be manually done after the creation of the readme like adding videos, pictures, and various other links. If you have input of how that could be done or anything else that could add a benifit please feel free to reach out!
+  There are still things that need to be manually done after the creation of the readme like adding videos, pictures, and various other links. If you have input of how that could be done or anything else that could add a benefit please feel free to reach out!
 
   ## Tests
 
@@ -37,4 +42,4 @@
 
   ## Questions
 
-  If you have any questions about the repo, open an issue or contact me directly at davesimpcontrol@gmail.com. You can find more of my work at [davercoder](https://github.com/davercoder/).
+  If you have any questions about the repo, open an issue or contact me directly at davesimpcontrol@gmail.com. You can find more of my work at [davercodes](https://github.com/davercodes/).
