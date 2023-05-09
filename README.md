@@ -20,8 +20,8 @@
   npm i -d
 
   ## Usage
-  
-  <a href="Assets\coding quiz.gif"><img src="Untitled_ May 8, 2023 4_18 PM.gif"></a>
+
+  <img src="Untitled_ May 8, 2023 4_18 PM.gif"></a>
 
 [watch video](https://drive.google.com/file/d/1qYDQKrWnm_lVEcKZhCXqd8tmpUjVIyUn/view?usp=sharing)
 
